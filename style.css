@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#container {
+  background-color: rgb(182, 176, 176);
+  width: 100%;
+}
+#canvas1 {
+  width: 100%;
+  max-width: 1920px;
+  max-height: 1080;
+  width: 100%;
+
+  background-color: black;
+}
+#audio1 {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 250px;
+  height: 40px;
+  margin: 10px;
+  /* display: block; */
+}
+#fileupload {
+   position: absolute; 
+  display: block;
+   top: 70px;
+  left: 25px;
+  margin: 5px;
+  color: white;
+  z-index: 10;
+}
+footer {
+  font-family: Arial, Helvetica, sans-serif;
+   position: absolute; 
+  width: 100%;
+  color: white;
+  font-size: 0.7rem;
+  text-shadow: 1px, 1px, 2px, #f5e9e9;
+  background: rgba(255, 255, 255, 0.5);
+  background: black;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  height: 1 rem;
+  line-height: 1 rem;
+  padding-right: 20px;
+}
+.btn {
+  position: absolute;  
+  margin: 20px;
+  width: 140px;
+  height: 40px;
+  font-size: 1.5rem;
+  color: #fff;
+  border-radius: 10px;
+}
+#recordBtn {
+   bottom: 10px;
+   left: 20px;  
+  background-color: red;
+}
+#stopBtn {
+  bottom: 10px;
+   left: 200px;  
+  background-color: #aaa;
+}
