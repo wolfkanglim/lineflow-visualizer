@@ -28,8 +28,7 @@ class FlowFieldEffect{
         this.#createGradient();
         this.#ctx.strokeStyle = this.gradient;
         this.radius = 0;
-        this.vr = 0.02;
-        
+        this.vr = 0.02;        
     }
     /* #createGradient(){
         this.gradient = this.#ctx.createLinearGradient(0, 0, this.#width, this.#height);
@@ -40,9 +39,8 @@ class FlowFieldEffect{
         this.gradient.addColorStop('0.8', '#dd22dd');
         this.gradient.addColorStop('0.9', '#73d629');
     } */
-    //radial gradient
     
-    //hue
+    //radial gradient        
     #createGradient(){
         this.gradient = this.#ctx.createRadialGradient(this.#width / 2, this.#height / 2, 7, this.#width / 2, this.#height / 2, this.#width * 0.6);
         this.gradient.addColorStop('0.2', '#ffffff');
@@ -60,20 +58,16 @@ class FlowFieldEffect{
         this.#ctx.beginPath();
         this.#ctx.moveTo(x, y);
         this.#ctx.lineTo(x + Math.cos(angle) * 30, y + Math.sin(angle) * 30);
-        this.#ctx.stroke();
-        
+        this.#ctx.stroke();        
     }
-
     
-    animate(timeStamp){
-        
+    animate(timeStamp){        
         let deltaTime = timeStamp - this.lastTime;
          this.lastTime = timeStamp;
         if(this.timer > this.interval){
             this.#ctx.fillStyle = 'rgba(0,0,0, .1)';
             this.#ctx.fillRect(0,0,this.#width, this.#height);
-            this.radius += this.vr;
-           
+            this.radius += this.vr;           
             if(this.radius > 15 || this.radius < - 15) this.vr *= -1;
         for(let y = 0; y < this.#height; y += this.cellSize){
             for(let x = 0; x < this.#width; x += this.cellSize){
@@ -82,8 +76,7 @@ class FlowFieldEffect{
             };            
         }     
          hue += 2;
-        this.timer = 0;
-        
+        this.timer = 0;        
         } else{
             this.timer += deltaTime;
         }       
@@ -93,6 +86,6 @@ class FlowFieldEffect{
 }
 
 flowField = new FlowFieldEffect(ctx, canvas.width, canvas.height);
-    flowField.animate(0);    
+flowField.animate(0);    
 
     
