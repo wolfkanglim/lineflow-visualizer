@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 #container {
   background-color: rgb(182, 176, 176);
   width: 100%;
@@ -13,7 +12,6 @@
   max-width: 1920px;
   max-height: 1080;
   width: 100%;
-
   background-color: black;
 }
 #audio1 {
@@ -27,7 +25,7 @@
 }
 #fileupload {
    position: absolute; 
-  display: block;
+   display: block;
    top: 70px;
   left: 25px;
   margin: 5px;
