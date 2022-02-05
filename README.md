@@ -1,2 +1,4 @@
 # lineflow-visualizer
-Line flow animation with music visualizer can be recorded webm file.
+Create a beautiful animations. HTML canvas rendering of 2D shapes and bitmap images.
+Use vanilla JavaScript to draw a single line animating vector field.
+Line flow animation with music visualizer can be recorded to webm file use Web Audio API.
